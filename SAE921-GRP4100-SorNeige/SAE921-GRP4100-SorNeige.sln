@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SAE921-GRP4100-SorNeige", "SAE921-GRP4100-SorNeige\SAE921-GRP4100-SorNeige.vcxproj", "{F987CECF-2EBE-4635-9D7B-E8EB7E568B54}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proto Edouard", "Proto Edouard", "{879B128F-B025-4867-A1D0-D6F0C03CCD68}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Proto Ed", "Proto Ed\Proto Ed.vcxproj", "{7BC24DA0-D0D7-4DDA-B927-F944558C749B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,9 +25,20 @@ Global
 		{F987CECF-2EBE-4635-9D7B-E8EB7E568B54}.Release|x64.Build.0 = Release|x64
 		{F987CECF-2EBE-4635-9D7B-E8EB7E568B54}.Release|x86.ActiveCfg = Release|Win32
 		{F987CECF-2EBE-4635-9D7B-E8EB7E568B54}.Release|x86.Build.0 = Release|Win32
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Debug|x64.ActiveCfg = Debug|x64
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Debug|x64.Build.0 = Debug|x64
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Debug|x86.Build.0 = Debug|Win32
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Release|x64.ActiveCfg = Release|x64
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Release|x64.Build.0 = Release|x64
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Release|x86.ActiveCfg = Release|Win32
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BC24DA0-D0D7-4DDA-B927-F944558C749B} = {879B128F-B025-4867-A1D0-D6F0C03CCD68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A2FA62-DA93-4411-B164-1C4E8E93D63C}
