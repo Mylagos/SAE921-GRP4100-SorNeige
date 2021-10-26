@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
+    <ClCompile Include="stats.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

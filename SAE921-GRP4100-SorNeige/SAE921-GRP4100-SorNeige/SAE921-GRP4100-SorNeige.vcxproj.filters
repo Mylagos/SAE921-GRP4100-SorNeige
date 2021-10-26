@@ -18,5 +18,13 @@
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="stats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
