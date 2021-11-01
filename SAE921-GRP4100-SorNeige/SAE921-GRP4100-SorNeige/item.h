@@ -11,14 +11,16 @@ private:
 		potion,
 
 	};
-	std::string name;
-	std::string itemDescription;
-	itemTag tag;
+	std::string name;//name of the item
+	std::string itemDescription;//simple description of the item
+	itemTag tag;//item type
+	int quantity;
 
 public:
 
-	virtual std::string getFunction();
-	virtual void usingItem();
-	virtual void loseItem();
+	item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest item.
+
+	std::string getFunction();//this is for getting function or description of the item.
+	void loseItem();//this is for deleting the item.
 };
 
