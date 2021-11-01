@@ -4,19 +4,21 @@
 
 class stats
 {
-private:
-	//main stat for all the game is here
-	int value_ability = 0;
-	int value_stamina = 0;
-	int value_luck = 0;
 
-	//simple enum for know what we talking if we went to change stats
+public:
 	enum name_stat
 	{
 		ability = 0,
 		stamina,
 		luck
 	};
+private:
+	//main stat for all the game is here
+	int value_ability = 0;
+	int value_stamina = 0;
+	int value_luck = 0;
+
+	
 
 	
 public:

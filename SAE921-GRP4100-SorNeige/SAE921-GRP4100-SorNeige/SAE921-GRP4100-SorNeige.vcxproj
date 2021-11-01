@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="follower.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
     <ClCompile Include="stats.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="follower.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="stats.h" />
   </ItemGroup>

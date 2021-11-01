@@ -3,7 +3,7 @@
 
 class item
 {
-private:
+public:
 	enum itemTag
 	{
 		weapon,
@@ -11,6 +11,8 @@ private:
 		potion,
 
 	};
+private:
+	
 	std::string name;//name of the item
 	std::string itemDescription;//simple description of the item
 	itemTag tag;//item type
