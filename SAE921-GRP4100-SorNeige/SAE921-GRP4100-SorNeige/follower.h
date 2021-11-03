@@ -13,7 +13,11 @@ private:
 
 	stats currentStat; //named currentstat to be easier to use in character
 
-	std::vector<item> inventory;
+	std::vector<std::unique_ptr<item>> inventory;
+
+	int weaponQty;
+	int qItemQty;
+	int potionQty;
 
 public:
 	void setName(std::string name_){this->name = name_;}
@@ -22,6 +26,11 @@ public:
 	void setDescription(std::string description_) { this->description = description_; }
 	std::string getDescription() { return description; }
 
-	void printInventory(); //Will be overridden in hero class
+	std::vector<std::unique_ptr<item>> getInventory() { return inventory; }
+
+	void setItemQty(); // Follower inventory. Will be overridden in hero class
+	void printEquipment();
+	void printInventory(); // Follower inventory. Will be overridden in hero class
+
 };
 
