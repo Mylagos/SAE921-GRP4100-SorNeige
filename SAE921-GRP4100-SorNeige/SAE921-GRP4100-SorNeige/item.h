@@ -23,12 +23,13 @@ public:
 	item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest item.
 
 	std::string getName();//give the name of the object
-	itemTag getTag() { return this->tag; }//give the Tag of the object
+	itemTag getTag();//give the Tag of the object
 	std::string getDescription();//give the description of the object
 
-	int getQuantity() { return this->quantity ; }//get quantity of the object.
+	int getQuantity();//get quantity of the object.
 	int addQuantity(int);//add a number to the quantity, can be positive or negative
-	int setQantity(int);//set quantity of the object, can only be positive
-	void loseItem();//call for delete them.
+	int setQuantity(int);//set quantity of the object, can only be positive(if negative quantity go to 0)
+
+
 };
 
