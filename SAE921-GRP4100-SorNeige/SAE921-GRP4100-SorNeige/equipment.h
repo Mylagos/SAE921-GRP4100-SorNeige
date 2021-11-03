@@ -8,9 +8,11 @@ class equipment: public item
 private:
 	
 	bool isEquipped;
+	stats Stats;
 
 public:
-	stats stats;
+	
+
 
 	equipment(std::string, std::string, itemTag, int, int, int);
 
@@ -18,5 +20,6 @@ public:
 	void equip();
 	void unequip();
 
+	stats getStats();
 };
 
