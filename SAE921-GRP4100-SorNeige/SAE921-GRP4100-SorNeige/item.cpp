@@ -1,5 +1,14 @@
 #include "item.h"
 
+item::item(std::string name_, std::string description_, itemTag tag_)
+{
+	this->name = name_;
+	this->itemDescription = description_;
+	this->tag = tag_;
+
+}
+
+
 std::string item::getName()
 {
 	return this->name;

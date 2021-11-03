@@ -11,7 +11,7 @@ public:
 		potion,
 
 	};
-private:
+protected:
 	
 	std::string name;//name of the item
 	std::string itemDescription;//simple description of the item
@@ -20,6 +20,7 @@ private:
 
 public:
 
+	item();
 	item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest item.
 
 	std::string getName();//give the name of the object

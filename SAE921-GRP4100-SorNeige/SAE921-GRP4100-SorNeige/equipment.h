@@ -10,8 +10,9 @@ private:
 	bool isEquipped;
 
 public:
-
 	stats stats;
+
+	equipment(std::string, std::string, itemTag, int, int, int);
 
 	bool getEquipped();
 	void equip();
