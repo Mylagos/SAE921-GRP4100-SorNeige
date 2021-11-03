@@ -6,7 +6,7 @@ class stats
 {
 
 public:
-	enum name_stat
+	enum class name_stat
 	{
 		ability = 0,
 		stamina,
@@ -26,10 +26,11 @@ public:
 	stats();//constructor that set all stat by default to 0
 	stats(int, int, int);//constructor is for setting specific stat
 
-	int getStat(name_stat);//use this for get a value of a stat
-	void setStat(name_stat, int);//for set a stat to a value
-	int addStat(name_stat, int);//for add a + or - value to a stat
-	void addAllStats(stats);//for add a another stats class to this stats like a item.
+	int getStat(name_stat);//get the value of the given stats
+	void setStat(name_stat, int);//set the value of the given stats
+	int addStat(name_stat, int);//add a value of the given stats, can be positive or negative.
+	void addAllStats(stats);//add the value off the class stats given
+	void subAllStats(stats);//subtract the value off the class stats given
 
 
 

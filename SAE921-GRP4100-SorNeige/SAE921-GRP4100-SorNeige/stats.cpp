@@ -80,3 +80,10 @@ void stats::addAllStats(stats addingStats_)
 	value_luck = value_luck + addingStats_.getStat(luck);
 }
 
+void stats::subAllStats(stats subtractStats_)
+{
+	value_ability = value_ability - subtractStats_.getStat(ability);
+	value_stamina = value_stamina - subtractStats_.getStat(stamina);
+	value_luck = value_luck - subtractStats_.getStat(luck);
+}
+
