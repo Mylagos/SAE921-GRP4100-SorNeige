@@ -8,11 +8,10 @@
 class follower
 {
 private:
-	std::string name;
-	std::string description;
+	std::string name; // Follower name (Not used in hero)
+	std::string description; // Follower description (Not used in hero)
 
-	//named currentstat to be easier to use in character
-	stats currentStat;
+	stats currentStat; //named currentstat to be easier to use in character
 
 	std::vector<item> inventory;
 
@@ -23,5 +22,6 @@ public:
 	void setDescription(std::string description_) { this->description = description_; }
 	std::string getDescription() { return description; }
 
+	void printInventory(); //Will be overridden in hero class
 };
 
