@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#include "follower.h"
-#include "Equipment.h"
-=======
 #include "Follower.h"
-#include "equipment.h"
->>>>>>> 05c08ca9a08d230393f685579bd0c5deb44d793c
+#include "Equipment.h"
 
 void Follower::setItemQty()
 {
@@ -39,15 +34,9 @@ std::stringstream Follower::printEquipment()
         Equipment* eee = static_cast<Equipment*>(i.get());
         if (ooo.get_tag() == item::itemTag::weapon)
         {
-<<<<<<< HEAD
             retu << "[" << j << "]" << " " + ooo.get_name() << ". ("
         			<< eee->getStats().getStat(Stats::name_stat::ability);
             //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
-=======
-            retu << "[" << j << "]" << " " + ooo.getName() << ". ("
-        			<< "" /*PLACEHOLDER FUNCTION STATS ITEMS*/;
-            //static_cast<equipment*>(i.get())->getStats().setStat(Stats::name_stat::ability, 10);
->>>>>>> 05c08ca9a08d230393f685579bd0c5deb44d793c
         }
     }
     return retu;
