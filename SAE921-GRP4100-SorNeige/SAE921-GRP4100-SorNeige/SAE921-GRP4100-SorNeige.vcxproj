@@ -144,14 +144,14 @@
     <ClCompile Include="item.cpp" />
     <ClCompile Include="potion.cpp" />
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
-    <ClCompile Include="stats.cpp" />
+    <ClCompile Include="Stats.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="equipment.h" />
     <ClInclude Include="follower.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="potion.h" />
-    <ClInclude Include="stats.h" />
+    <ClInclude Include="Stats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,18 +1,16 @@
 #pragma once
 #include "item.h"
-#include "stats.h"
+#include "Stats.h"
 
 
 class equipment: public item
 {
 private:
 	
-	bool isEquipped;
+	bool isEquipped  = false;
 	stats Stats;
 
 public:
-	
-
 
 	equipment(std::string, std::string, itemTag, int, int, int);
 
@@ -20,6 +18,13 @@ public:
 	void equip();
 	void unequip();
 
-	stats getStats();
+	stats& getStats();
+	void setStats(stats::name_stat s, int value)
+	{
+		Stats.set_stat(s, value);
+	}
+	
+
+	void inspect() override;
 };
 
