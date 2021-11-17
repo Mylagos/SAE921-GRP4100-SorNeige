@@ -9,13 +9,8 @@
 class Follower
 {
 private:
-<<<<<<< HEAD
-	std::string name; // Follower name_ (Not used in hero)
-	std::string description; // Follower description (Not used in hero)
-=======
 	std::string name_; // Follower name_ (Not used in hero)
 	std::string description_; // Follower description_ (Not used in hero)
->>>>>>> 05c08ca9a08d230393f685579bd0c5deb44d793c
 
 	Stats currentStat_; //named currentstat to be easier to use in character
 
@@ -27,12 +22,12 @@ private:
 
 public:
 	void setName(std::string name){this->name_ = name;}
-	std::string getName() { return name_; }
+	std::string getName() const { return name_; }
 
 	void setDescription(std::string description) { this->description_ = description; }
-	std::string getDescription() { return description_; }
+	std::string getDescription() const { return description_; }
 
-	std::vector<std::unique_ptr<item>> getInventory() { return inventory_; }
+	std::vector<std::unique_ptr<item>> getInventory() const { return inventory_; }
 
 	void setItemQty(); // Follower inventory_. Will be overridden in hero class
 	std::stringstream printEquipment();
