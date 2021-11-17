@@ -32,3 +32,10 @@ Stats& Equipment::getStats()
 {
 	return this->stats_;
 }
+
+void Equipment::inspect()
+{
+
+}
+
+

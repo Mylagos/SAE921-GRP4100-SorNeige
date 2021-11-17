@@ -1,6 +1,8 @@
 #pragma once
 #include "item.h"
 #include "Stats.h"
+#include "iostream"
+
 
 
 class Equipment: public item
@@ -24,7 +26,7 @@ public:
 		stats_.set_stat(s, value);
 	}
 	
-
+	
 	void inspect() override;
 };
 
