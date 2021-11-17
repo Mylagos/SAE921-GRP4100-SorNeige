@@ -3,25 +3,25 @@
 #include "Stats.h"
 
 
-class equipment: public item
+class Equipment: public item
 {
 private:
 	
-	bool isEquipped  = false;
-	Stats Stats;
+	bool is_equipped_  = false;
+	Stats stats_;
 
 public:
 
-	equipment(std::string, std::string, itemTag, int, int, int);
+	Equipment(std::string&, std::string&, itemTag&, int, int, int);
 
-	bool getEquipped();
+	bool get_equipped();
 	void equip();
 	void unequip();
 
 	Stats& getStats();
-	void setStats(Stats::name_stat s, int value)
+	void set_stats(Stats::name_stat s, int value)
 	{
-		Stats.set_stat(s, value);
+		stats_.set_stat(s, value);
 	}
 	
 

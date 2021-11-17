@@ -25,7 +25,7 @@ public:
 
 	// ITEMS Methods?
 
-	std::string returnStatsUsed(); // used in potion.cpp
+	std::string returnStatsUsed(); // used in Potion.cpp
 
 	int printHability(){} // used to inspect weapon ,see weapon Stats (todo)
 

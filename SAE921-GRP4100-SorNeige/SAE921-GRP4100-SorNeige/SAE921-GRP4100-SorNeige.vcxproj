@@ -139,18 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="equipment.cpp" />
+    <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="follower.cpp" />
     <ClCompile Include="item.cpp" />
-    <ClCompile Include="potion.cpp" />
+    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
     <ClCompile Include="Stats.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="equipment.h" />
+    <ClInclude Include="Equipment.h" />
     <ClInclude Include="follower.h" />
     <ClInclude Include="item.h" />
-    <ClInclude Include="potion.h" />
+    <ClInclude Include="Potion.h" />
     <ClInclude Include="Stats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

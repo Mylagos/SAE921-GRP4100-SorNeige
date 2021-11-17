@@ -1,23 +1,23 @@
 #include "follower.h"
-#include "equipment.h"
+#include "Equipment.h"
 
 void follower::setItemQty()
 {
     for (const auto& i : inventory)
     {
         
-        i.get()->getTag();
+        i.get()->get_tag();
         
         item ooo = *i;
-        if (ooo.getTag() == item::itemTag::weapon)
+        if (ooo.get_tag() == item::itemTag::weapon)
         {
             this->weaponQty++;
         }
-        if (ooo.getTag() == item::itemTag::quest_item)
+        if (ooo.get_tag() == item::itemTag::quest_item)
         {
             this->qItemQty++;
         }
-        if (ooo.getTag() == item::itemTag::potion)
+        if (ooo.get_tag() == item::itemTag::potion)
         {
             this->potionQty++;
         }
@@ -31,12 +31,12 @@ std::stringstream follower::printEquipment()
     for (const auto& i : inventory)
     {
         item ooo = *i;
-        equipment* eee = static_cast<equipment*>(i.get());
-        if (ooo.getTag() == item::itemTag::weapon)
+        Equipment* eee = static_cast<Equipment*>(i.get());
+        if (ooo.get_tag() == item::itemTag::weapon)
         {
-            retu << "[" << j << "]" << " " + ooo.getName() << ". ("
+            retu << "[" << j << "]" << " " + ooo.get_name() << ". ("
         			<< eee->getStats().getStat(Stats::name_stat::ability);
-            //static_cast<equipment*>(i.get())->getStats().setStat(Stats::name_stat::ability, 10);
+            //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
         }
     }
     return retu;

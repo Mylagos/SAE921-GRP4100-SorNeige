@@ -1,34 +1,34 @@
-#include "equipment.h"
+#include "Equipment.h"
 
-equipment::equipment(std::string name_, std::string description_, itemTag tag_, int ability_, int stamina_, int luck_)
+Equipment::Equipment(std::string& name, std::string& description, itemTag& tag, int ability, int stamina, int luck)
 {
 
-	this->name = name_;
-	this->itemDescription = description_;
-	this->tag = tag_;
-	this->Stats.set_stat(Stats::name_stat::ability, ability_);
-	this->Stats.set_stat(Stats::name_stat::stamina, stamina_);
-	this->Stats.set_stat(Stats::name_stat::luck, luck_);
+	this->name_ = name;
+	this->item_description_ = description;
+	this->tag_ = tag;
+	this->stats_.set_stat(Stats::name_stat::ability, ability);
+	this->stats_.set_stat(Stats::name_stat::stamina, stamina);
+	this->stats_.set_stat(Stats::name_stat::luck, luck);
 
 }
 
 
-bool equipment::getEquipped()
+bool Equipment::get_equipped()
 {
-	return this->isEquipped;
+	return this->is_equipped_;
 }
 
-void equipment::equip()
+void Equipment::equip()
 {
-	this->isEquipped = true;
+	this->is_equipped_ = true;
 }
 
-void equipment::unequip()
+void Equipment::unequip()
 {
-	this->isEquipped = false;
+	this->is_equipped_ = false;
 }
 
-Stats& equipment::getStats()
+Stats& Equipment::getStats()
 {
-	return this->Stats;
+	return this->stats_;
 }

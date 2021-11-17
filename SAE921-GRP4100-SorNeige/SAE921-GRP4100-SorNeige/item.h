@@ -13,23 +13,23 @@ public:
 	};
 protected:
 	
-	std::string name;//name of the item
-	std::string itemDescription;//simple description of the item
-	itemTag tag;//item type
-	int quantity;
+	std::string name_;//name_ of the item
+	std::string item_description_;//simple description of the item
+	itemTag tag_;//item type
+	int quantity_ = 1;
 
 public:
 
-	item();
+	item() = default;
 	item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest item.
 
-	std::string getName();//give the name of the object
-	itemTag getTag();//give the Tag of the object
-	std::string getDescription();//give the description of the object
+	std::string get_name();//give the name_ of the object
+	itemTag get_tag();//give the Tag of the object
+	std::string get_description();//give the description of the object
 
-	int getQuantity();//get quantity of the object.
-	int addQuantity(int);//add a number to the quantity, can be positive or negative
-	int setQuantity(int);//set quantity of the object, can only be positive(if negative quantity go to 0)
+	int get_quantity();//get quantity_ of the object.
+	int add_quantity(int);//add a number to the quantity_, can be positive or negative
+	int set_quantity(int);//set quantity_ of the object, can only be positive(if negative quantity_ go to 0)
 
 	virtual void inspect();
 	

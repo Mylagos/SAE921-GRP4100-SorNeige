@@ -9,7 +9,7 @@
 class follower
 {
 private:
-	std::string name; // Follower name (Not used in hero)
+	std::string name; // Follower name_ (Not used in hero)
 	std::string description; // Follower description (Not used in hero)
 
 	Stats currentStat; //named currentstat to be easier to use in character

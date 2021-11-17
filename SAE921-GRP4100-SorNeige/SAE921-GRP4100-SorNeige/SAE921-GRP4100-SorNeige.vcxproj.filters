@@ -27,10 +27,10 @@
     <ClCompile Include="follower.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="equipment.cpp">
+    <ClCompile Include="Equipment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="potion.cpp">
+    <ClCompile Include="Potion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClInclude Include="follower.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="equipment.h">
+    <ClInclude Include="Equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="potion.h">
+    <ClInclude Include="Potion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

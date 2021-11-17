@@ -1,51 +1,51 @@
 #include "item.h"
 
-item::item(std::string name_, std::string description_, itemTag tag_)
+item::item(std::string name, std::string description, itemTag tag)
 {
-	this->name = name_;
-	this->itemDescription = description_;
-	this->tag = tag_;
+	this->name_ = name;
+	this->item_description_ = description;
+	this->tag_ = tag;
 
 }
 
 
-std::string item::getName()
+std::string item::get_name()
 {
-	return this->name;
+	return this->name_;
 }
 
-item::itemTag item::getTag()
+item::itemTag item::get_tag()
 {
-	return this->tag;
+	return this->tag_;
 }
 
-std::string item::getDescription()
+std::string item::get_description()
 {
-	return this->itemDescription;
+	return this->item_description_;
 }
 
-int item::getQuantity()
+int item::get_quantity()
 {
-	return this->quantity;
+	return this->quantity_;
 }
 
-int item::addQuantity(int addingValue_)
+int item::add_quantity(int adding_value)
 {
-	quantity = quantity + addingValue_;
-	return this->quantity;
+	quantity_ = quantity_ + adding_value;
+	return this->quantity_;
 }
 
-int item::setQuantity(int newQuantity_)
+int item::set_quantity(int new_quantity)
 {
-	if (newQuantity_ >= 0)
+	if (new_quantity >= 0)
 	{
-		quantity = newQuantity_;
+		quantity_ = new_quantity;
 	}
 	else
 	{
-		quantity = 0;
+		quantity_ = 0;
 	}
 
-	return this->quantity;
+	return this->quantity_;
 }
 
