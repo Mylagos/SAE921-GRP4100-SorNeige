@@ -1,4 +1,6 @@
 #include "Follower.h"
+#include "Equipment.h"
+#include "potion.h"
 
 void Follower::setItemQty()
 {
@@ -39,6 +41,11 @@ std::stringstream Follower::printEquipment()
         			<< equipmentPtr->printItemStats().str() << ")" << std::endl;
             //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
         }
+        if (item.get_tag() == Item::itemTag::quest_item)
+        {
+            retu << "[" << j << "]" << " " + item.get_name() << std::endl;
+        }
+
     }
     return retu;
 }
@@ -51,11 +58,11 @@ std::stringstream Follower::printPotions()
     for (const auto& i : inventory_)
     {
         Item item = *i;
-        Equipment* equipmentPtr = static_cast<Equipment*>(i.get());
+        Potion* potionPtr = static_cast<Potion*>(i.get());
 
         if (item.get_tag() == Item::itemTag::potion)
         {
-            ret << "[" << j << "]" << " " + item.get_name() << std::endl;
+            ret << "[" << j << "]" << " " + item.get_name() << potionPtr->get_dose() <<  std::endl;
             //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
         }
     }
