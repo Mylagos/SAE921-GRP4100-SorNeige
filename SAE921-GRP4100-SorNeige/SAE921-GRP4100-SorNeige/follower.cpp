@@ -1,11 +1,12 @@
 #include "follower.h"
 #include "equipment.h"
+
 void follower::setItemQty()
 {
     for (const auto& i : inventory)
     {
         
-        i.get()->getTag()
+        i.get()->getTag();
         
         item ooo = *i;
         if (ooo.getTag() == item::itemTag::weapon)
@@ -23,20 +24,27 @@ void follower::setItemQty()
     }
 }
 
-void follower::printEquipment()
+std::stringstream follower::printEquipment()
 {
     int j=1;
+    std::stringstream retu;
     for (const auto& i : inventory)
     {
         item ooo = *i;
         equipment* eee = static_cast<equipment*>(i.get());
         if (ooo.getTag() == item::itemTag::weapon)
         {
-            std::cout << "[" << j << "]" << " " << ooo.getName() << ". ("
+            retu << "[" << j << "]" << " " + ooo.getName() << ". ("
         			<< eee->getStats().getStat(stats::name_stat::ability);
-            static_cast<equipment*>(i.get())->getStats().setStat(stats::name_stat::ability, 10);
+            //static_cast<equipment*>(i.get())->getStats().setStat(stats::name_stat::ability, 10);
         }
     }
+    return retu;
+}
+
+std::stringstream follower::printInventory()
+{
+    return std::stringstream();
 }
 
 

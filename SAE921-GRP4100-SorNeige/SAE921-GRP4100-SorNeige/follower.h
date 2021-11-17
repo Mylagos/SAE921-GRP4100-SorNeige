@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 #include "stats.h"
 #include "item.h"
@@ -29,8 +30,8 @@ public:
 	std::vector<std::unique_ptr<item>> getInventory() { return inventory; }
 
 	void setItemQty(); // Follower inventory. Will be overridden in hero class
-	void printEquipment();
-	void printInventory(); // Follower inventory. Will be overridden in hero class
+	std::stringstream printEquipment();
+	std::stringstream printInventory(); // Follower inventory. Will be overridden in hero class
 
 };
 
