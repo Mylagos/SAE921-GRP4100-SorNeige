@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-class item
+class Item
 {
 public:
 	enum class itemTag
@@ -13,15 +13,15 @@ public:
 	};
 protected:
 	
-	std::string name_;//name_ of the item
-	std::string item_description_;//simple description of the item
-	itemTag tag_;//item type
+	std::string name_;//name_ of the Item
+	std::string item_description_;//simple description of the Item
+	itemTag tag_;//Item type
 	int quantity_ = 1;
 
 public:
 
-	item() = default;
-	item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest item.
+	Item() = default;
+	Item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest Item.
 
 	std::string get_name();//give the name_ of the object
 	itemTag get_tag();//give the Tag of the object

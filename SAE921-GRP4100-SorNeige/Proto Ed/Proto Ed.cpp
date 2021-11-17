@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <sstream>
 #include "Stat.h"
 #include "Item.h"
 #include "Potion.h"
@@ -11,6 +12,11 @@ int main()
 	int input3;
 	int o;
 	bool loopOut = false;
+
+	std::stringstream eee;
+	eee << "Which pouch do you want to go trough?" << std::endl
+		<< "[1] : Items. [2] : Potions. [3] : Help." << std::endl;
+	std::cout << eee.str();
 
 	while (loopOut == false)
 	{

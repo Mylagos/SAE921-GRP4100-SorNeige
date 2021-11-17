@@ -1,11 +1,13 @@
 #pragma once
-#include "item.h"
+#include <sstream>
+
+#include "Item.h"
 #include "Stats.h"
 #include "iostream"
 
 
 
-class Equipment: public item
+class Equipment: public Item
 {
 private:
 	
@@ -26,7 +28,8 @@ public:
 		stats_.set_stat(s, value);
 	}
 	
-	
+
+	std::stringstream printItemStats();
 	void inspect() override;
 };
 
