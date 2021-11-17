@@ -7,8 +7,8 @@ class Potion: public Item
 private:
 
 	Stats::name_stat potStat_;
-	int dose_;
-	int maxDose_;
+	int dose_ = 2;
+	int maxDose_ = 2;
 
 public:
 	Potion(std::string, std::string, itemTag, Stats::name_stat);

@@ -3,6 +3,8 @@
 
 #include "Item.h"
 #include "Stats.h"
+#include "iostream"
+
 
 
 class Equipment: public Item
