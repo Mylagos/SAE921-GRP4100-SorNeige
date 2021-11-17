@@ -6,32 +6,32 @@
 #include "Stats.h"
 #include "item.h"
 
-class follower
+class Follower
 {
 private:
-	std::string name; // Follower name (Not used in hero)
-	std::string description; // Follower description (Not used in hero)
+	std::string name_; // Follower name_ (Not used in hero)
+	std::string description_; // Follower description_ (Not used in hero)
 
-	Stats currentStat; //named currentstat to be easier to use in character
+	Stats currentStat_; //named currentstat to be easier to use in character
 
-	std::vector<std::unique_ptr<item>> inventory;
+	std::vector<std::unique_ptr<item>> inventory_;
 
-	int weaponQty;
-	int qItemQty;
-	int potionQty;
+	int weaponQty_;
+	int qItemQty_;
+	int potionQty_;
 
 public:
-	void setName(std::string name_){this->name = name_;}
-	std::string getName() { return name; }
+	void setName(std::string name){this->name_ = name;}
+	std::string getName() { return name_; }
 
-	void setDescription(std::string description_) { this->description = description_; }
-	std::string getDescription() { return description; }
+	void setDescription(std::string description) { this->description_ = description; }
+	std::string getDescription() { return description_; }
 
-	std::vector<std::unique_ptr<item>> getInventory() { return inventory; }
+	std::vector<std::unique_ptr<item>> getInventory() { return inventory_; }
 
-	void setItemQty(); // Follower inventory. Will be overridden in hero class
+	void setItemQty(); // Follower inventory_. Will be overridden in hero class
 	std::stringstream printEquipment();
-	std::stringstream printInventory(); // Follower inventory. Will be overridden in hero class
+	std::stringstream printInventory(); // Follower inventory_. Will be overridden in hero class
 
 };
 
