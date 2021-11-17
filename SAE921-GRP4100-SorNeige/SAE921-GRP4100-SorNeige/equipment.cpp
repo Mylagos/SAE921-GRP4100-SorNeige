@@ -32,3 +32,12 @@ Stats& Equipment::getStats()
 {
 	return this->stats_;
 }
+
+std::stringstream Equipment::printItemStats()
+{
+	std::stringstream ret;
+	ret << this->getStats().get_stat(Stats::name_stat::ability) << ", "
+		<< this->getStats().get_stat(Stats::name_stat::stamina) << ", "
+		<< this->getStats().get_stat(Stats::name_stat::luck);
+	return ret;
+}

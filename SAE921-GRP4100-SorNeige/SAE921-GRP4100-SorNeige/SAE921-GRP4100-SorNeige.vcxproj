@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Follower.cpp" />
-    <ClCompile Include="item.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Potion.cpp" />
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
     <ClCompile Include="Stats.cpp" />
@@ -149,7 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="Follower.h" />
-    <ClInclude Include="item.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Potion.h" />
     <ClInclude Include="Stats.h" />
   </ItemGroup>
