@@ -27,7 +27,7 @@ public:
 
 	std::string returnStatsUsed(); // used in potion.cpp
 
-	int printHability(){} // used to inspect weapon ,see weapon stats (todo)
+	int printHability(){} // used to inspect weapon ,see weapon Stats (todo)
 
 
 

@@ -8,7 +8,7 @@ class equipment: public item
 private:
 	
 	bool isEquipped  = false;
-	stats Stats;
+	Stats Stats;
 
 public:
 
@@ -18,8 +18,8 @@ public:
 	void equip();
 	void unequip();
 
-	stats& getStats();
-	void setStats(stats::name_stat s, int value)
+	Stats& getStats();
+	void setStats(Stats::name_stat s, int value)
 	{
 		Stats.set_stat(s, value);
 	}

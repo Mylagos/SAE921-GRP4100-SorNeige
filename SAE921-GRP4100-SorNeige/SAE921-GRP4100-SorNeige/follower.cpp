@@ -35,8 +35,8 @@ std::stringstream follower::printEquipment()
         if (ooo.getTag() == item::itemTag::weapon)
         {
             retu << "[" << j << "]" << " " + ooo.getName() << ". ("
-        			<< eee->getStats().getStat(stats::name_stat::ability);
-            //static_cast<equipment*>(i.get())->getStats().setStat(stats::name_stat::ability, 10);
+        			<< eee->getStats().getStat(Stats::name_stat::ability);
+            //static_cast<equipment*>(i.get())->getStats().setStat(Stats::name_stat::ability, 10);
         }
     }
     return retu;

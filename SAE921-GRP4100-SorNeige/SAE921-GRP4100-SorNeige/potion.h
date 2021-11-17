@@ -1,20 +1,20 @@
 #pragma once
 #include "item.h"
-#include "stats.h"
+#include "Stats.h"
 
 class potion: public item 
 {
 private:
 
-	stats::name_stat potStat;
+	Stats::name_stat potStat;
 	int dose;
 	int maxDose;
 
 public:
-	potion(std::string, std::string, itemTag, stats::name_stat);
-	potion(std::string, std::string, itemTag, stats::name_stat, int);
+	potion(std::string, std::string, itemTag, Stats::name_stat);
+	potion(std::string, std::string, itemTag, Stats::name_stat, int);
 
-	stats::name_stat getPotStat();
+	Stats::name_stat getPotStat();
 	int getDose();
 	int getMaxDose();
 

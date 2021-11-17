@@ -6,9 +6,9 @@ equipment::equipment(std::string name_, std::string description_, itemTag tag_, 
 	this->name = name_;
 	this->itemDescription = description_;
 	this->tag = tag_;
-	this->Stats.set_stat(stats::name_stat::ability, ability_);
-	this->Stats.set_stat(stats::name_stat::stamina, stamina_);
-	this->Stats.set_stat(stats::name_stat::luck, luck_);
+	this->Stats.set_stat(Stats::name_stat::ability, ability_);
+	this->Stats.set_stat(Stats::name_stat::stamina, stamina_);
+	this->Stats.set_stat(Stats::name_stat::luck, luck_);
 
 }
 
@@ -28,7 +28,7 @@ void equipment::unequip()
 	this->isEquipped = false;
 }
 
-stats& equipment::getStats()
+Stats& equipment::getStats()
 {
 	return this->Stats;
 }
