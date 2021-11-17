@@ -140,16 +140,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="Fight.cpp" />
     <ClCompile Include="Follower.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Potion.cpp" />
     <ClCompile Include="SAE921-GRP4100-SorNeige.cpp" />
     <ClCompile Include="Stats.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Equipment.h" />
+    <ClInclude Include="Fight.h" />
     <ClInclude Include="Follower.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Potion.h" />
     <ClInclude Include="Stats.h" />
   </ItemGroup>
