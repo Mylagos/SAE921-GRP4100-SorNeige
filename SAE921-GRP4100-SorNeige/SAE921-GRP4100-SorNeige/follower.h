@@ -5,7 +5,6 @@
 
 #include "Stats.h"
 #include "Item.h"
-#include "Equipment.h"
 
 class Follower
 {
@@ -24,6 +23,8 @@ private:
 	int potionQty_;
 	int equipmentQty_;
 	int qItemQty_;
+
+	Item* ooo;
 
 public:
 	void setName(std::string name){this->name_ = name;}
