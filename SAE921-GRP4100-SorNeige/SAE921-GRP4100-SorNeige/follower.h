@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-#include "stats.h"
+#include "Stats.h"
 #include "item.h"
 
 class follower
@@ -11,7 +11,7 @@ private:
 	std::string name; // Follower name (Not used in hero)
 	std::string description; // Follower description (Not used in hero)
 
-	stats currentStat; //named currentstat to be easier to use in character
+	Stats currentStat; //named currentstat to be easier to use in character
 
 	std::vector<item> inventory;
 

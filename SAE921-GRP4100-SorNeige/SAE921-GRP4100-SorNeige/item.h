@@ -8,7 +8,7 @@ public:
 	{
 		weapon,
 		quest_item,
-		potion,
+		potion
 
 	};
 protected:
@@ -31,6 +31,8 @@ public:
 	int addQuantity(int);//add a number to the quantity, can be positive or negative
 	int setQuantity(int);//set quantity of the object, can only be positive(if negative quantity go to 0)
 
+	virtual void inspect();
+	
 
 };
 
