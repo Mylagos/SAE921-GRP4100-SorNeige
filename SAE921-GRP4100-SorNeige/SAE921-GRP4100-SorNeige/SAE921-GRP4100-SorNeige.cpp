@@ -1,10 +1,26 @@
 
 #include <iostream>
+#include "follower.h"
 
 int main()
 {
-    std::cout << "Hello ED!" << std::endl << "ça joue?" << std::endl;
-    std::cout << "oeoeoeoeoe" << "Jte reçois 5 sur 5 tkt" << std::endl;
+	Follower character;
+
+	std::cout << character.printInventory().str();
+	std::cin.clear();
+
+	std::cout << character.printEquipment().str();
+
+	std::cout << character.printPotions().str();
+
+
+	std::cout << character.printInventory().str();
+	std::cin.clear();
+
+	std::cout << character.printEquipment().str();
+
+	std::cout << character.printPotions().str();
+
 }
 
 

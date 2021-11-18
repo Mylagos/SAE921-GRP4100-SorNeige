@@ -12,7 +12,7 @@ private:
 	std::string name_; // FFollower Variables
 	std::string description_; // Follower Variables
 
-	Stats currentStats_;
+	Stats currentStat_;
 	Stats maxStats_;
 
 	std::vector<std::unique_ptr<Item>> inventory_;
@@ -28,9 +28,6 @@ public:
 	void setDescription(std::string description) { this->description_ = description; }
 	std::string getDescription() const { return description_; }
 
-	void setCurrentStats(Stats stats) { this->currentStats_ = stats; }
-	Stats getCurrentStats() { return currentStats_; }
-
 	// Returns the number of items in the inventory matching the specified tag
 	int returnItemQuantity(Item::itemTag itemTag);
 
@@ -42,6 +39,11 @@ public:
 	// Potions menu
 	std::stringstream printPotions();
 
+	// ad a item to their inventory
+	void add_inventory(std::string,std::string);
+	void add_inventory(std::string,std::string,int,int,int);
+	void add_inventory(std::string, std::string, Stats::name_stat);
+	void add_inventory(Stats::name_stat);
 
 };
 

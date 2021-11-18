@@ -16,7 +16,7 @@ private:
 
 public:
 
-	Equipment(std::string&, std::string&, itemTag&, int, int, int);
+	Equipment(std::string, std::string, itemTag, int, int, int);
 
 	bool get_equipped() ;
 	void equip() ;
