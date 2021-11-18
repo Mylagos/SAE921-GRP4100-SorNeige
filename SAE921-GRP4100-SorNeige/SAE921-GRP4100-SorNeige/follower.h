@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <memory>
 
 #include "Stats.h"
 #include "Item.h"
@@ -47,6 +48,10 @@ public:
 	void add_inventory(std::string,std::string,int,int,int);
 	void add_inventory(std::string, std::string, Stats::name_stat);
 	void add_inventory(Stats::name_stat);
+	void add_inventory(std::unique_ptr<Item> item);
+
+
+	
 
 };
 
