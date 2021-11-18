@@ -32,19 +32,6 @@ public:
 	int add_quantity(int);//add a number to the quantity_, can be positive or negative
 	int set_quantity(int);//set quantity_ of the object, can only be positive(if negative quantity_ go to 0)
 
-	//virtual for Equipment
-	virtual std::stringstream printItemStats() = 0;
-	virtual bool get_equipped() = 0;
-	virtual void equip() = 0;
-	virtual void unequip() = 0;
-	virtual Stats& getStats() = 0;
-	virtual void set_stats(Stats::name_stat s, int value) = 0;
-
-	//virtual for potion
-	virtual Stats::name_stat get_pot_stat() = 0;
-	virtual int get_dose() = 0;
-	virtual int get_max_dose() = 0;
-	virtual int add_dose(int) = 0;
-
-}
+	virtual  ~Item() = default;
+};
 

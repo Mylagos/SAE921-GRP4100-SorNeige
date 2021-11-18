@@ -18,13 +18,13 @@ public:
 
 	Equipment(std::string&, std::string&, itemTag&, int, int, int);
 
-	bool get_equipped() override;
-	void equip() override;
-	void unequip() override;
-	Stats& getStats() override;
+	bool get_equipped() ;
+	void equip() ;
+	void unequip() ;
+	Stats& getStats() ;
 
-	void set_stats(Stats::name_stat s, int value) override;
-	std::stringstream printItemStats() override;
+	void set_stats(Stats::name_stat s, int value) ;
+	std::stringstream printItemStats() ;
 
 	
 };

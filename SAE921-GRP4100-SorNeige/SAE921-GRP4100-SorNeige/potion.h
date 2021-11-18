@@ -17,10 +17,10 @@ public:
 	Potion(std::string, std::string, itemTag, Stats::name_stat, int);
 
 	Stats::name_stat get_pot_stat();
-	int get_dose() override;
-	int get_max_dose() override;
+	int get_dose() ;
+	int get_max_dose() ;
 
-	int add_dose(int) override;
+	int add_dose(int) ;
 
 
 
