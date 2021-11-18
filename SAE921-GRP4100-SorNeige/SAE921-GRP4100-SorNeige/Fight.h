@@ -9,6 +9,7 @@ private:
 
 	std::vector<Monster> monster_vector_;
 	bool end_fight_ = false;
+	
 
 public:
 	Fight() = default;
@@ -18,8 +19,11 @@ public:
 	~Fight();
 
 
-	void to_fight(int&);
-	void fighting_round();
+	void fighting_loop(Follower&);
+	void fighting_round(Follower&);
+
+	std::stringstream action_check(Follower&);
+	std::stringstream check_bag(Follower&);
 
 	bool luck_check();
 	bool ability_check();

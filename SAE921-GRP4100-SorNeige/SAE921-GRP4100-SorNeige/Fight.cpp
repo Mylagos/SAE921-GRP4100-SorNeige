@@ -1,10 +1,10 @@
 ﻿#include "Fight.h"
 
-void Fight::to_fight(int& character)
+void Fight::fighting_loop(Follower& character)
 {
 	do
 	{
-		fighting_round();
+		fighting_round(character);
 		if (true/**/)
 		{
 			end_fight_ = true;
@@ -16,11 +16,13 @@ void Fight::to_fight(int& character)
 }
 
 
-void Fight::fighting_round()
+void Fight::fighting_round(Follower& character)
 {
-	//action check
-	//action is check bag, block or attack.
 
+	action_check(character);
+	//action check
+	//action is check bag, block, attack or flee if possible.
+	//loop if the player use bag, or anything else.
 
 	//fight
 	//opposing ability check on target in blocking state or attacking state
@@ -33,3 +35,4 @@ void Fight::fighting_round()
 	//check if we are death
 
 }
+
