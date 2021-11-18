@@ -38,10 +38,10 @@ std::stringstream Follower::printEquipment()
         }
       
     }
-    if (no_item)
+    /*if (no_item)
     {
         retu << "You don't have any item!\n";
-    }
+    }*/
     return retu;
 }
 
@@ -60,10 +60,10 @@ std::stringstream Follower::printPotions()
             no_item = false;
         }
     }
-    if (no_item)
+    /*if (no_item)
     {
         ret << "You don't have any potions!\n";
-    }
+    }*/
     return ret;
 }
 
@@ -110,4 +110,9 @@ void Follower::add_inventory(const Stats::name_stat stats)
 {
     inventory_.push_back(std::make_unique<Potion>(stats));
 
+}
+
+void Follower::add_inventory(std::unique_ptr<Item> item)
+{
+    inventory_.emplace_back(std::move(item));
 }
