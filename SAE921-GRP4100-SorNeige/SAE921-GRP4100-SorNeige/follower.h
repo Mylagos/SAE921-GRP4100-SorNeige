@@ -39,6 +39,11 @@ public:
 	// Potions menu
 	std::stringstream printPotions();
 
+	// ad a item to their inventory
+	void add_inventory(std::string,std::string);
+	void add_inventory(std::string,std::string,int,int,int);
+	void add_inventory(std::string, std::string, Stats::name_stat);
+	void add_inventory(Stats::name_stat);
 
 };
 
