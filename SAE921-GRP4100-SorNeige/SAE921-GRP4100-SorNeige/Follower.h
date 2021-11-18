@@ -9,15 +9,15 @@
 class Follower
 {
 private:
-	std::string name_; // Follower name_ (Not used in hero)
-	std::string description_; // Follower description_ (Not used in hero)
+	std::string name_; // FFollower Variables
+	std::string description_; // Follower Variables
 
-	Stats currentStat_; //named currentstat to be easier to use in character
+	Stats currentStats_;
 	Stats maxStats_;
 
 	std::vector<std::unique_ptr<Item>> inventory_;
 
-	// Values used in the various inventory prints
+	// Values used in the printInventory()
 	int gold_;
 	int provisions_;
 
@@ -28,8 +28,11 @@ public:
 	void setDescription(std::string description) { this->description_ = description; }
 	std::string getDescription() const { return description_; }
 
+	void setCurrentStats(Stats stats) { this->currentStats_ = stats; }
+	Stats getCurrentStats() { return currentStats_; }
 
-	int returnItemQuantity(Item::itemTag itemTag); // Follower inventory_. Will be overridden in hero class
+	// Returns the number of items in the inventory matching the specified tag
+	int returnItemQuantity(Item::itemTag itemTag);
 
 	// These tree methods simply prints out the inventory "Menus"
 	// Main inventory menu
@@ -39,10 +42,6 @@ public:
 	// Potions menu
 	std::stringstream printPotions();
 
-
-	int potionQty();
-	int equipmentQty();
-	int qItemQty();
 
 };
 
