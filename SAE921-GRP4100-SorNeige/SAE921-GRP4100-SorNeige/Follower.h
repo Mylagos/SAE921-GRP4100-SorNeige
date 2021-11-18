@@ -17,14 +17,9 @@ private:
 
 	std::vector<std::unique_ptr<Item>> inventory_;
 
+	// Values used in the various inventory prints
 	int gold_;
 	int provisions_;
-
-	int potionQty_;
-	int equipmentQty_;
-	int qItemQty_;
-
-	Item* ooo;
 
 public:
 	void setName(std::string name){this->name_ = name;}
@@ -33,12 +28,21 @@ public:
 	void setDescription(std::string description) { this->description_ = description; }
 	std::string getDescription() const { return description_; }
 
-	std::vector<std::unique_ptr<Item>> getInventory() const { return inventory_; }
 
 	void setItemQty(); // Follower inventory_. Will be overridden in hero class
-	std::stringstream printInventory(); // Follower inventory_. Will be overridden in hero class
+
+	// These tree methods simply prints out the inventory "Menus"
+	// Main inventory menu
+	std::stringstream printInventory();
+	// Equipment menu
 	std::stringstream printEquipment();
+	// Potions menu
 	std::stringstream printPotions();
+
+
+	int potionQty();
+	int equipmentQty();
+	int qItemQty();
 
 };
 

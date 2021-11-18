@@ -10,7 +10,7 @@ void Follower::setItemQty()
         i.get()->get_tag();
         
         Item ooo = *i;
-        if (ooo.get_tag() == Item::itemTag::weapon)
+        if (i->get_tag() == Item::itemTag::weapon)
         {
             this->equipmentQty_++;
         }
@@ -32,16 +32,18 @@ std::stringstream Follower::printEquipment()
     retu << "You decide to look trough your items." << std::endl;
     for (const auto& i : inventory_)
     {
-        Item item = *i;
-        Equipment* equipmentPtr = static_cast<Equipment*>(i.get());
+        //Item item = *i;
+        //auto* equipmentPtr = static_cast<Equipment*>(i.get());
 
-        if (item.get_tag() == Item::itemTag::weapon)
+        // Goes trough the inventory and prints out every weapons
+        if (i->get_tag() == Item::itemTag::weapon)
         {
-            retu << "[" << j << "]" << " " + item.get_name() << ". ("
-        			<< equipmentPtr->printItemStats().str() << ")" << std::endl;
+            retu << "[" << j << "]" << " " + i->get_name() << ". ("
+        			<< dynamic_cast<Equipment*>(i)->printItemStats().str() << ")" << std::endl;
             //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
         }
-        if (item.get_tag() == Item::itemTag::quest_item)
+        // Goes trough the inventory and prints out quest items (There's no sort so weapons and QI will be on queue)
+        if (i->get_tag() == Item::itemTag::quest_item)
         {
             retu << "[" << j << "]" << " " + item.get_name() << std::endl;
         }
@@ -57,13 +59,14 @@ std::stringstream Follower::printPotions()
     ret << "You look trough your potions" << std::endl;
     for (const auto& i : inventory_)
     {
+        // On each iteration, potionPtr will become the item pointed by I
         Item item = *i;
         Potion* potionPtr = static_cast<Potion*>(i.get());
 
+        // Goes trough the inventory and prints out every potion
         if (item.get_tag() == Item::itemTag::potion)
         {
-            ret << "[" << j << "]" << " " + item.get_name() << potionPtr->get_dose() <<  std::endl;
-            //static_cast<Equipment*>(i.get())->getStats().setStat(stats_::name_stat::ability, 10);
+            ret << "[" << j << "]" << " " + item.get_name() << ". Doses left :" << potionPtr->get_dose() <<  std::endl;
         }
     }
     return std::stringstream();
