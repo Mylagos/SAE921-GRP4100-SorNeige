@@ -12,7 +12,7 @@ private:
 	std::string name_; // FFollower Variables
 	std::string description_; // Follower Variables
 
-	Stats currentStat_;
+	Stats currentStats_;
 	Stats maxStats_;
 
 	std::vector<std::unique_ptr<Item>> inventory_;
@@ -27,6 +27,9 @@ public:
 
 	void setDescription(std::string description) { this->description_ = description; }
 	std::string getDescription() const { return description_; }
+
+	void setCurrentStats(Stats stats) { this->currentStats_ = stats; }
+	Stats getCurrentStats() { return currentStats_; }
 
 	// Returns the number of items in the inventory matching the specified tag
 	int returnItemQuantity(Item::itemTag itemTag);
