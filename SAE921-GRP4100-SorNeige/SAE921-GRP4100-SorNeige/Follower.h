@@ -29,7 +29,7 @@ public:
 	std::string getDescription() const { return description_; }
 
 
-	void setItemQty(); // Follower inventory_. Will be overridden in hero class
+	int returnItemQuantity(Item::itemTag itemTag); // Follower inventory_. Will be overridden in hero class
 
 	// These tree methods simply prints out the inventory "Menus"
 	// Main inventory menu
