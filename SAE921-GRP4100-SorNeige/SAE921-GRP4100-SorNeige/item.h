@@ -19,7 +19,6 @@ protected:
 	int quantity_ = 1;
 
 public:
-
 	Item() = default;
 	Item(std::string, std::string, itemTag); //simple constructor for creating no useable object, like quest Item.
 
@@ -31,7 +30,6 @@ public:
 	int add_quantity(int);//add a number to the quantity_, can be positive or negative
 	int set_quantity(int);//set quantity_ of the object, can only be positive(if negative quantity_ go to 0)
 
-	virtual void inspect();
 	
 
 };

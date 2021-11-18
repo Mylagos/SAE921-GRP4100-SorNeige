@@ -30,6 +30,6 @@ public:
 	
 
 	std::stringstream printItemStats();
-	void inspect() override;
+	
 };
 

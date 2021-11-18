@@ -1,6 +1,6 @@
 #include "Follower.h"
 #include "Equipment.h"
-#include "potion.h"
+#include "Potion.h"
 
 void Follower::setItemQty()
 {
@@ -81,7 +81,7 @@ std::stringstream Follower::printInventory()
     ret << this->gold_ << " gold." << std::endl;
     ret << this->provisions_ << " provision." << std::endl;
     ret << this->potionQty_ << " potion." << std::endl;
-    ret << this->equipmentQty_ << " item." << std::endl;
+    ret << this->equipmentQty_ << " Item." << std::endl;
     ret << "Which pouch do you want to go trough?" << std::endl
 
         << "[1] : Items. [2] : Potions. [3] : Help." << std::endl;
