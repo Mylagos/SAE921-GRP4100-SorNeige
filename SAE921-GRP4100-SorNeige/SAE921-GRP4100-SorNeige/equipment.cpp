@@ -33,6 +33,13 @@ Stats& Equipment::getStats()
 	return this->stats_;
 }
 
+void Equipment::set_stats(Stats::name_stat s, int value)
+{
+	
+	stats_.set_stat(s, value);
+	
+}
+
 std::stringstream Equipment::printItemStats()
 {
 	std::stringstream ret;
