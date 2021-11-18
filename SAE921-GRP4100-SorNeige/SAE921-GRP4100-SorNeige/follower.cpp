@@ -29,7 +29,7 @@ std::stringstream Follower::printEquipment()
     // Goes trough the inventory and prints out each Equipment and Quest Item name and stats if equipment
     for (const auto& i : inventory_)
     {
-        if (Equipment* myEquipment = dynamic_cast<Equipment*>(i.get()))
+        if (auto* myEquipment = dynamic_cast<Equipment*>(i.get()))
         {
             retu << "[" << j << "]" << " " + myEquipment->get_name() << ". ("
         			<< myEquipment->printItemStats().str() << ")" << std::endl;
@@ -50,7 +50,7 @@ std::stringstream Follower::printPotions()
     // Goes trough the inventory and prints out every potion name and doses
     for (const auto& i : inventory_)
     {
-        if (Potion* myPotion = dynamic_cast<Potion*>(i.get()))
+        if (auto* myPotion = dynamic_cast<Potion*>(i.get()))
         {
             ret << "[" << j << "]" << " " + myPotion->get_name() << ". Doses left :" << myPotion->get_dose() <<  std::endl;
         }
