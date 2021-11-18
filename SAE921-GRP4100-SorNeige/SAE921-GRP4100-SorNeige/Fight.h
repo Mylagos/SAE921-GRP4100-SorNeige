@@ -3,6 +3,7 @@
 #include "Follower.h"
 #include "Monster.h"
 
+
 class Fight
 {
 private:
@@ -22,8 +23,7 @@ public:
 	void fighting_loop(Follower&);
 	void fighting_round(Follower&);
 
-	std::stringstream action_check(Follower&);
-	std::stringstream check_bag(Follower&);
+
 
 	bool luck_check();
 	bool ability_check();

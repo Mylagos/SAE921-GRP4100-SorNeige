@@ -19,7 +19,7 @@ void Fight::fighting_loop(Follower& character)
 void Fight::fighting_round(Follower& character)
 {
 
-	action_check(character);
+	
 	//action check
 	//action is check bag, block, attack or flee if possible.
 	//loop if the player use bag, or anything else.
