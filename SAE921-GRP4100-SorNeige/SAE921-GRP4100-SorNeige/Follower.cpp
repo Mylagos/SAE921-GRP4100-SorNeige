@@ -74,9 +74,9 @@ std::stringstream Follower::printInventory()
     // Prints out info on the player
     std::stringstream ret;
     ret << "You decide to take a moment to reflect upon yourself and look trough your bags" << std::endl << std::endl;
-    ret << "Ability " << this->currentStat_.get_stat(Stats::name_stat::ability) << "/" << this->maxStats_.get_stat(Stats::name_stat::ability) << std::endl;
-    ret << "Stamina " << this->currentStat_.get_stat(Stats::name_stat::stamina) << "/" << this->maxStats_.get_stat(Stats::name_stat::stamina) << std::endl;
-    ret << "Luck " << this->currentStat_.get_stat(Stats::name_stat::luck) << "/" << this->maxStats_.get_stat(Stats::name_stat::luck) << std::endl;
+    ret << "Ability " << this->currentStats_.get_stat(Stats::name_stat::ability) << "/" << this->maxStats_.get_stat(Stats::name_stat::ability) << std::endl;
+    ret << "Stamina " << this->currentStats_.get_stat(Stats::name_stat::stamina) << "/" << this->maxStats_.get_stat(Stats::name_stat::stamina) << std::endl;
+    ret << "Luck " << this->currentStats_.get_stat(Stats::name_stat::luck) << "/" << this->maxStats_.get_stat(Stats::name_stat::luck) << std::endl;
     ret << std::endl;
     ret << "Your bag contains:" << std::endl;
     ret << this->gold_ << " gold." << std::endl;
