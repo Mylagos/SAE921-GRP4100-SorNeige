@@ -116,3 +116,68 @@ void Follower::add_inventory(std::unique_ptr<Item> item)
 {
     inventory_.emplace_back(std::move(item));
 }
+
+int Follower::add_to_currentStat(Stats::name_stat nameStat,int addingStats)
+{
+    if (currentStats_.get_stat(nameStat) + addingStats > 0) {
+        if (currentStats_.get_stat(nameStat) + addingStats >= maxStats_.get_stat(nameStat))
+        {
+            currentStats_.set_stat(nameStat, maxStats_.get_stat(nameStat));
+        }
+        else
+        {
+            currentStats_.add_stat(nameStat, addingStats);
+        }
+    }
+    else
+    {
+        currentStats_.set_stat(nameStat, 0);
+    }
+
+    return currentStats_.get_stat(nameStat);
+}
+
+int Follower::set_to_currentStat(Stats::name_stat nameStat,int settingStats)
+{
+
+    if (settingStats >= maxStats_.get_stat(nameStat))
+    {
+        currentStats_.set_stat(nameStat, maxStats_.get_stat(nameStat));
+    }
+    else
+    {
+        currentStats_.set_stat(nameStat, settingStats);
+    }
+
+    return currentStats_.get_stat(nameStat);
+}
+
+int Follower::add_to_maxStat(Stats::name_stat name_stat, int addingStats)
+{
+    if(maxStats_.get_stat(name_stat) + addingStats <= 0 )
+    {
+        maxStats_.set_stat(name_stat, 0);
+    }
+    else {
+        maxStats_.add_stat(name_stat, addingStats);
+    }
+
+    return maxStats_.get_stat(name_stat);
+}
+
+int Follower::set_to_maxStat(Stats::name_stat name_stat, int settingStats)
+{
+    if (settingStats < 0)
+    {
+        maxStats_.set_stat(name_stat, 0);
+    }
+    else {
+        maxStats_.set_stat(name_stat, settingStats);
+    }
+
+    return maxStats_.get_stat(name_stat);
+
+}
+
+
+
