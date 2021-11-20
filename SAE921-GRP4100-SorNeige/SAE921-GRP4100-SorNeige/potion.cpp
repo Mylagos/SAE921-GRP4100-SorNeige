@@ -3,32 +3,31 @@
 
 Potion::Potion(Stats::name_stat stat)
 {
-	std::string statname;
+	
 
 	switch (stat)
 	{
 	case Stats::name_stat::ability:
 
-		statname = "Habilité";
+		this->name_ = "Potion of ability";
 		break;
 
 	case Stats::name_stat::luck:
 
-		statname = "Chance";
+		this->name_ = "Potion of luck";
 		break;
 
 	case Stats::name_stat::stamina:
 
-		statname = "Endurance";
+		this->name_ = "Potion of stamina";
 		break;
 
 	default:
-		statname = "Errors enum";
+		this->name_ = "Errors enum";
 		break;
 
 	}
 
-	this->name_ = "potion de " + statname;
 	this->item_description_ = "une potion pour régénérer une statistique.";
 	this->tag_ = itemTag::potion;
 	this->potStat_ = stat;
