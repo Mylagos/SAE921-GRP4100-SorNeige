@@ -23,6 +23,7 @@ private:
 	int provisions_;
 
 public:
+
 	void setName(std::string name){this->name_ = name;}
 	std::string getName() const { return name_; }
 
@@ -44,12 +45,19 @@ public:
 	std::stringstream printPotions();
 
 	// ad a item to their inventory
-	void add_inventory(std::string,std::string);
-	void add_inventory(std::string,std::string,int,int,int);
-	void add_inventory(std::string, std::string, Stats::name_stat);
-	void add_inventory(Stats::name_stat);
-	void add_inventory(std::unique_ptr<Item> item);
+	void add_inventory(std::string,std::string);//add quest item
+	void add_inventory(std::string,std::string,int,int,int);//add equipment
+	void add_inventory(std::string, std::string, Stats::name_stat);//add potion
+	void add_inventory(Stats::name_stat);//add a "normal" potion
+	void add_inventory(std::unique_ptr<Item> item);//add a pregenerated item
 
+	
+	int add_to_currentStat(Stats::name_stat,int);//get damage on the stats chosen and return the new value. use negative for damage and positive for regen. this new value cannot be below 0 or abow maxstats value
+	int set_to_currentStat(Stats::name_stat,int);//using for setting a stats this new value cannot be below 0 or abow the same maxstats value
+
+	
+	int add_to_maxStat(Stats::name_stat, int);//get damage on the max stamina stats and return the new value. use negative for damage and positive for regen. this new value cannot be below 0
+	int set_to_maxStat(Stats::name_stat, int);//using for setting the maxStamina. this new value cannot be below 0
 
 	
 
