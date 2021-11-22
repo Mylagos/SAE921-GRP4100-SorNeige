@@ -22,16 +22,22 @@ private:
 	int gold_;
 	int provisions_;
 
+	std::unique_ptr<Item> itemSelected_ = nullptr;
+
 public:
 
-	void setName(std::string name){this->name_ = name;}
+	void setName(const std::string name){this->name_ = name;}
 	std::string getName() const { return name_; }
 
-	void setDescription(std::string description) { this->description_ = description; }
+	void setDescription(const std::string description) { this->description_ = description; }
 	std::string getDescription() const { return description_; }
 
-	void setCurrentStats(Stats stats) { this->currentStats_ = stats; }
-	Stats getCurrentStats() { return currentStats_; }
+	void setCurrentStats(const Stats stats) { this->currentStats_ = stats; }
+	Stats getCurrentStats() const { return currentStats_; }
+
+	void setItemSelected(std::unique_ptr<Item> item) { this->itemSelected_.swap(item); }
+	Item getItemSelected() const { return *itemSelected_; }
+
 
 	// Returns the number of items in the inventory matching the specified tag
 	int returnItemQuantity(Item::itemTag itemTag);
@@ -43,6 +49,16 @@ public:
 	std::stringstream printEquipment();
 	// Potions menu
 	std::stringstream printPotions();
+	// Specific item menu
+	std::stringstream printItemSelected();
+
+	// Text layout function. Will be moved!!!
+	char cinIndicator(char input);
+	Item returnItem(char input, Item::itemTag tag);
+	// Switch case that will cout all the menus
+	// /!\ it does cout so it will have to be modified when going into sfml \!/
+	void inventoryManager();
+
 
 	// ad a item to their inventory
 	void add_inventory(std::string,std::string);//add quest item

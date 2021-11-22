@@ -2,11 +2,16 @@
 #include <iostream>
 #include "follower.h"
 #include "equipment.h"
+#include "potion.h"
 
 int main()
 {
 	Follower character;
-	
+	Equipment arc("arc", "un arc", Item::itemTag::weapon, 2, 2, 2);
+	Potion myPotion("Heal pot", "Pot that heals", Item::itemTag::potion, Stats::name_stat::luck);
+
+	character.add_inventory(std::make_unique<Equipment>(arc));
+	character.add_inventory(std::make_unique<Potion>(myPotion));
 
 	std::cout << character.printInventory().str();
 	std::cin.clear();
@@ -25,6 +30,7 @@ int main()
 	std::cout << character.printEquipment().str();
 
 	std::cout << character.printPotions().str();
+	character.inventoryManager();
 
 
 }
