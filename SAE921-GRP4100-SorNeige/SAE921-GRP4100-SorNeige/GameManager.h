@@ -15,8 +15,10 @@ public:
 
 	
 
-	void roll_player_character_stats();
+	void roll_all_player_character_stats();
 	int roll_new_stat(Stats::name_stat);
+
+	void playerinventoryManager();
 
 	
 

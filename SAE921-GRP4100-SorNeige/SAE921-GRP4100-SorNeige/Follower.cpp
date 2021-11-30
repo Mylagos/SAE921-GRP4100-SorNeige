@@ -341,3 +341,5 @@ int Follower::get_one_maxStat(Stats::name_stat name_stat)
 
 
 
+
+

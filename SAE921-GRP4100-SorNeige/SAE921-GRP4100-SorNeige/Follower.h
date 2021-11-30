@@ -24,7 +24,7 @@ private:
 	int provisions_;
 
 	std::unique_ptr<Item> itemSelected_ = nullptr;
-	std::unique_ptr<Equipment> itemEquiped_ = nullptr;
+
 
 public:
 
