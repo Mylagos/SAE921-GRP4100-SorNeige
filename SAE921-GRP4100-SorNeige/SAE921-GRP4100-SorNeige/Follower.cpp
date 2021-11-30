@@ -299,6 +299,11 @@ int Follower::set_to_currentStat(Stats::name_stat nameStat,int settingStats)
     return currentStats_.get_stat(nameStat);
 }
 
+int Follower::get_one_currentStat(Stats::name_stat name_stat)
+{
+    return currentStats_.get_stat(name_stat);
+}
+
 int Follower::add_to_maxStat(Stats::name_stat name_stat, int addingStats)
 {
     if(maxStats_.get_stat(name_stat) + addingStats <= 0 )
@@ -324,6 +329,11 @@ int Follower::set_to_maxStat(Stats::name_stat name_stat, int settingStats)
 
     return maxStats_.get_stat(name_stat);
 
+}
+
+int Follower::get_one_maxStat(Stats::name_stat name_stat)
+{
+    return maxStats_.get_stat(name_stat);
 }
 
 

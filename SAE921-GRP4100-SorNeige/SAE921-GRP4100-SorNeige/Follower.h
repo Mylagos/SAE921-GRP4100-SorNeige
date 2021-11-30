@@ -70,11 +70,11 @@ public:
 	
 	int add_to_currentStat(Stats::name_stat,int);//get damage on the stats chosen and return the new value. use negative for damage and positive for regen. this new value cannot be below 0 or abow maxstats value
 	int set_to_currentStat(Stats::name_stat,int);//using for setting a stats this new value cannot be below 0 or abow the same maxstats value
-
+	int get_one_currentStat(Stats::name_stat);//for getting one particuliare stats
 	
 	int add_to_maxStat(Stats::name_stat, int);//get damage on the max stamina stats and return the new value. use negative for damage and positive for regen. this new value cannot be below 0
 	int set_to_maxStat(Stats::name_stat, int);//using for setting the maxStamina. this new value cannot be below 0
-
+	int get_one_maxStat(Stats::name_stat);//for getting one particuliare stats
 	
 
 };
