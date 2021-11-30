@@ -136,10 +136,13 @@ Item Follower::returnItem(char input, Item::itemTag tag)
                 j++;
             }
         }
-        if (auto* myPotion = dynamic_cast<Potion*>(i.get()))
+        if (tag == Item::itemTag::potion)
         {
-            if (input == j) { this->itemSelected_ = std::make_unique<Potion>(*myPotion); }
-            j++;
+            if (auto* myPotion = dynamic_cast<Potion*>(i.get()))
+            {
+                if (input == j) { this->itemSelected_ = std::make_unique<Potion>(*myPotion); }
+                j++;
+            }
         }
     }
     return Item();
@@ -177,7 +180,6 @@ void Follower::inventoryManager()
             { 
                 invCase = 'e';
                 returnItem(invInput, Item::itemTag::weapon);
-                std::cout << itemSelected_->get_name() << dynamic_cast<Equipment*>(itemSelected_.get())->printItemStats().str();
             }
             break;
         case 'd':
@@ -200,6 +202,7 @@ void Follower::inventoryManager()
             // Même problème que dans la fonction printItemSelected, le check du tag fonctionne pas, tout renvoie à 'c'
             std::cout << printItemSelected().str();
             invInput = cinIndicator(invInput);
+            if (invInput == '0' && itemSelected_->get_tag() != Item::itemTag::potion) { invCase = 'c'; }
             if (invInput == '0' && itemSelected_->get_tag() == Item::itemTag::potion) { invCase = 'd'; }
             else { invCase = 'c'; }
             break;
