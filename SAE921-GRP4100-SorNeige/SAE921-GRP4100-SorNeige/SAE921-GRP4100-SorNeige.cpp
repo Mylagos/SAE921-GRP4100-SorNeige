@@ -3,9 +3,13 @@
 #include "follower.h"
 #include "equipment.h"
 #include "potion.h"
+#include "GameManager.h"
 
 int main()
 {
+	GameManager this_game_{"Gerard"};
+
+
 	Follower character;
 	Equipment arc("arc", "un arc", Item::itemTag::weapon, 2, 2, 2);
 	Potion myPotion("Heal pot", "Pot that heals", Item::itemTag::potion, Stats::name_stat::luck);
