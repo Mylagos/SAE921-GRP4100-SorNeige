@@ -42,13 +42,13 @@ int GameManager::roll_new_stat(Stats::name_stat name_stat)
 	{
 	case Stats::name_stat::ability:
 
-		new_stat = 6 + rand() % 4 + rand() % 4 ;// random value betwen 6 and 12, probably 9(2 value)
+		new_stat = 6 + rand() % 4 + rand() % 4 ;// random value between 6 and 12, probably 9(2 value)
 		break;
 	case Stats::name_stat::stamina:
-		new_stat = 14 + rand() % 4 + rand() % 4 + rand() % 4 ; //random value betwen 14 and 23, probably 18-19(3 value)
+		new_stat = 14 + rand() % 4 + rand() % 4 + rand() % 4 ; //random value between 14 and 23, probably 18-19(3 value)
 		break;
 	case Stats::name_stat::luck:
-		new_stat = 5 + rand() % 5 ; //randome value betwen 5 and 9, 7 in the middle.
+		new_stat = 5 + rand() % 5 ; //random value between 5 and 9, 7 in the middle.
 		break;
 
 	}

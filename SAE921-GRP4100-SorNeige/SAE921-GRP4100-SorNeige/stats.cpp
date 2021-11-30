@@ -19,6 +19,7 @@ int Stats::get_stat(name_stat name_stat_)
 	case name_stat::ability:
 
 		return value_ability_;
+		
 
 	case name_stat::stamina:
 
@@ -39,14 +40,17 @@ void Stats::set_stat(name_stat name_stat_, int newValue_)
 	case name_stat::ability:
 
 		value_ability_ = newValue_;
+		break;
 
 	case name_stat::stamina:
 
 		value_stamina_ = newValue_;
+		break;
 
 	case name_stat::luck:
 
 		value_luck_ = newValue_;
+		break;
 	}
 }
 
