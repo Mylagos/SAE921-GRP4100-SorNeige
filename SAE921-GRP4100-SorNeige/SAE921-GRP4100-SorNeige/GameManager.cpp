@@ -151,11 +151,76 @@ int GameManager::roll_new_stat(Stats::name_stat name_stat)
 }
 
 
-void GameManager::playerinventoryManager()
+void GameManager::player_inventory_manager()
 {
 
 	player_character_.inventoryManager();
 
+}
+
+void GameManager::game_loop()
+{
+	bool exit_loop = false;
+	do
+	{
+		this->story_manager();
+
+	} while (!exit_loop);
+}
+
+void GameManager::story_manager()
+{
+	int player_choice = -1;
+	switch (chapter_)
+	{
+	case 0:
+		std::cout << "at the northern borders of allansia, winters are extremely harsh.\n"
+			<< "the snow is falling in tight flakes, and an icy blizzard freezes to the bones the intrepid travelers who venture into this far-off land.\n"
+			<< "waiting MAJ,\n";
+		system("pause");
+		chapter_ = 1;
+		break;
+
+	case 1:
+		std::cout
+			<< "you arrive at the edge of a crevasse.\n"
+			<< "a snow bridge spans it.\n";
+		system("pause");
+		do
+		{
+			do {
+			std::cout << "\n[1]if you want to cross the crevasse by walking on the snow bridge.\n"
+				<< "[2]if you prefer to bypass it\n"
+				<< "[0]look at your inventory\n>";
+			std::cin >> player_choice;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			if (player_choice <= -1 || player_choice >= 3)
+			{
+				std::cout << "you need to enter a good value(0-2)";
+			}
+		} while (player_choice <= -1 || player_choice >= 3);
+			switch (player_choice)
+			{
+			case 0:
+				player_character_.inventoryManager();
+				break;
+			case 1:
+				chapter_ = 335;
+				break;
+			case 2:
+				chapter_ = 310;
+				break;
+			default:
+				std::cout << "\n\n ERRORS CHAPTER 1\n\n";
+			}
+		} while (!(chapter_ == 335 || chapter_ == 310));
+		break;
+	default:
+
+		std::cout << "errors incorect narative arc";
+		system("pause");
+	}
 }
 
 

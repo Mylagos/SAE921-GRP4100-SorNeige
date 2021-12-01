@@ -6,7 +6,7 @@ int main()
 {
 	GameManager this_game_{};
 
-	this_game_.playerinventoryManager();
+	this_game_.game_loop();
 
 
 }

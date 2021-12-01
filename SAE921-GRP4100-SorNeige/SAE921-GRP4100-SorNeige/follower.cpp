@@ -339,6 +339,11 @@ int Follower::get_one_maxStat(Stats::name_stat name_stat)
     return maxStats_.get_stat(name_stat);
 }
 
+/*void Follower::equip_item(std::unique_ptr<Item> item)
+{
+    it
+}*/
+
 
 
 
