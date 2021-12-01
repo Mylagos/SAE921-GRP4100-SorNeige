@@ -5,7 +5,7 @@ GameManager::GameManager()
 	std::string character_name;
 	//create the player character.
 	//define the base line of the character(name).
-	std::cout << "Good day, we need an name for you to starting this adventure!\n what is your name? > ";
+	std::cout << "Good day, we need an name for you to starting this adventure!\n what is your name? \n> ";
 	std::cin >> character_name;
 	player_character_.setName(character_name);
 
@@ -26,7 +26,7 @@ GameManager::GameManager()
 	player_character_.set_to_currentStat(Stats::name_stat::ability, player_character_.get_one_maxStat(Stats::name_stat::ability));
 	std::cout << "You get " << player_character_.get_one_currentStat(Stats::name_stat::ability) << " ability.\n";
 	system("pause");
-	std::cout << "and for the last stat we have your luck, this stats represent your luck to perform critical hit, or have good special event."
+	std::cout << "and for the last stat we have your luck, this stats represent your luck to perform critical hit, or have good special event.\n"
 		<< "that represent too, if low, your chance to take critical hit and have bad special event.\n";
 	system("pause");
 	player_character_.set_to_maxStat(Stats::name_stat::luck, roll_new_stat(Stats::name_stat::luck));
@@ -216,11 +216,46 @@ void GameManager::story_manager()
 			}
 		} while (!(chapter_ == 335 || chapter_ == 310));
 		break;
+	case 335:
+		std::cout << "the snow bridge is very narrow, and also very slippery.\n";
+		std::cout << "you attempt to passe it(luck check)";
+		system("pause");
+		if (test_player_luck())
+		{
+			std::cout << "you pass the check!\n";
+			chapter_ = 41;
+		}else
+		{
+			std::cout << "you fail the check!\n";
+			chapter_ = 389;
+		}
+
+		break;
+		
+		
 	default:
 
-		std::cout << "errors incorect narative arc";
+		std::cout << "errors incorect narative arc\n";
 		system("pause");
 	}
+}
+
+bool GameManager::test_player_luck()
+{
+	srand(time(nullptr));
+
+	
+	int rand_value = rand() % 6 + rand() % 6;
+
+	if (rand_value <= player_character_.get_one_currentStat(Stats::name_stat::luck))
+	{
+		return  true;
+	}else
+	{
+		return false;
+	}
+
+	
 }
 
 

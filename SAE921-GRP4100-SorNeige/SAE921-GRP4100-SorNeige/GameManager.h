@@ -27,5 +27,6 @@ public:
 	void menu_manager_safe();
 	void menu_manager_unsafe();
 
+	bool test_player_luck();// test the luck of the player, if true it pass(win) the test, if false it failed the test
 	
 };
