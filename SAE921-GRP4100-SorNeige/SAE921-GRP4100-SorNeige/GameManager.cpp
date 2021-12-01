@@ -176,7 +176,7 @@ void GameManager::story_manager()
 	case 0:
 		std::cout << "at the northern borders of allansia, winters are extremely harsh.\n"
 			<< "the snow is falling in tight flakes, and an icy blizzard freezes to the bones the intrepid travelers who venture into this far-off land.\n"
-			<< "waiting MAJ,\n";
+			<< "et blablabla passons a la suite!\n";
 		system("pause");
 		chapter_ = 1;
 		break;
